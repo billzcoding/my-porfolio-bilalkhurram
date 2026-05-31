@@ -35,6 +35,8 @@ function Index() {
       <Header />
       <main className="relative z-10">
         <Hero />
+        <About />
+        <Skills />
         <Projects />
         <Experience />
       </main>
