@@ -1,4 +1,4 @@
-import { Mail } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 
 export function Header() {
   return (
@@ -11,24 +11,36 @@ export function Header() {
           RBK<span className="text-[oklch(0.72_0.18_50)]">.DEV</span>
         </a>
         <div className="mx-1 h-5 w-px bg-white/10" />
-        <a
-          href="#projects"
-          className="rounded-full px-3 py-1.5 text-sm text-neutral-300 transition-colors hover:bg-white/5 hover:text-white"
-        >
+        <a href="#about" className="hidden sm:inline-block rounded-full px-3 py-1.5 text-sm text-neutral-300 transition-colors hover:bg-white/5 hover:text-white">
+          About
+        </a>
+        <a href="#skills" className="hidden sm:inline-block rounded-full px-3 py-1.5 text-sm text-neutral-300 transition-colors hover:bg-white/5 hover:text-white">
+          Skills
+        </a>
+        <a href="#projects" className="rounded-full px-3 py-1.5 text-sm text-neutral-300 transition-colors hover:bg-white/5 hover:text-white">
           Projects
         </a>
-        <a
-          href="#experience"
-          className="rounded-full px-3 py-1.5 text-sm text-neutral-300 transition-colors hover:bg-white/5 hover:text-white"
-        >
+        <a href="#experience" className="rounded-full px-3 py-1.5 text-sm text-neutral-300 transition-colors hover:bg-white/5 hover:text-white">
           Experience
         </a>
+        <div className="mx-1 h-5 w-px bg-white/10" />
         <a
-          href="mailto:khurrambilal647@gmail.com"
-          aria-label="Email Bilal"
-          className="ml-1 grid h-9 w-9 place-items-center rounded-full bg-white text-black transition-transform hover:scale-105"
+          href="https://github.com/billzcoding"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+          className="grid h-9 w-9 place-items-center rounded-full text-neutral-300 transition-colors hover:bg-white/5 hover:text-white"
         >
-          <Mail className="h-4 w-4" />
+          <Github className="h-4 w-4" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/raja-bilal-khurram"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+          className="grid h-9 w-9 place-items-center rounded-full bg-white text-black transition-transform hover:scale-105"
+        >
+          <Linkedin className="h-4 w-4" />
         </a>
       </nav>
     </header>

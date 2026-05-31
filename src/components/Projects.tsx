@@ -1,4 +1,4 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Github } from "lucide-react";
 import { TiltCard } from "./TiltCard";
 import { Reveal } from "./Reveal";
 
@@ -7,25 +7,33 @@ const projects = [
     n: "01",
     title: "Pocket Agent",
     tag: "Local AI Engine",
-    body: "Local AI agent engine engineered by fine-tuning a 0.5B LLM utilizing Unsloth and LoRA frameworks. Achieved 100% tool-calling precision and sub-200ms CPU execution limits via GGUF 4-bit quantization.",
-    stack: ["Python", "Unsloth", "GGUF"],
+    body: "High-performance offline AI agent — fine-tuned a 0.5B LLM with Unsloth + LoRA. 100% tool-calling accuracy and sub-200ms CPU latency via 4-bit GGUF quantization.",
+    stack: ["Python", "Unsloth", "GGUF", "llama.cpp"],
     accent: "from-orange-500/30 via-orange-500/5 to-transparent",
   },
   {
     n: "02",
     title: "EatGuru",
     tag: "Predictive Allocation",
-    body: "A predictive allocation and budget algorithm built to safely handle real-time macro-nutrient and expense surpluses. Scaled execution to onboard 24 active paying tiers within 3 days (Fixed Survivor tier at 200 PKR).",
+    body: "Automated budget & nutrition engine with predictive calorie + expense re-calibration. Onboarded 24 paying users within 3 days of launch.",
     stack: ["TypeScript", "FastAPI", "Algorithms"],
     accent: "from-blue-500/25 via-blue-500/5 to-transparent",
   },
   {
     n: "03",
-    title: "BlinkTalk Suite",
+    title: "Blink-Talk",
     tag: "Assistive CV",
-    body: "An offline-ready computer vision assistive infrastructure driven by MediaPipe gesture frameworks. Bridges eye-blink sequencing with localized pipeline transformations under a 300ms delay envelope.",
-    stack: ["OpenCV", "MediaPipe", "Python"],
+    body: "Offline-ready computer vision suite using MediaPipe + an integrated LLM, enabling communication for paralyzed individuals at <300ms end-to-end latency.",
+    stack: ["OpenCV", "MediaPipe", "Python", "LLM"],
     accent: "from-emerald-500/20 via-emerald-500/5 to-transparent",
+  },
+  {
+    n: "04",
+    title: "Khata",
+    tag: "Restaurant Mgmt",
+    body: "ACID-compliant restaurant management system with a 12-table relational schema and RBAC dashboards. Automated inventory tracking for 50+ items.",
+    stack: ["Python", "SQLite", "RBAC"],
+    accent: "from-purple-500/25 via-purple-500/5 to-transparent",
   },
 ];
 
@@ -44,13 +52,13 @@ export function Projects() {
               </h2>
             </div>
             <p className="max-w-sm text-sm text-neutral-400">
-              Three systems. Each one solves a real bottleneck — latency, allocation,
-              or accessibility — at the edge.
+              Four systems. Each solving a real bottleneck — latency, allocation,
+              accessibility, or data integrity — at the edge.
             </p>
           </div>
         </Reveal>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {projects.map((p, i) => (
             <Reveal key={p.title} delay={i * 0.08}>
               <TiltCard className="h-full">
@@ -65,7 +73,7 @@ export function Projects() {
                     </span>
                   </div>
 
-                  <h3 className="relative mt-8 text-3xl font-bold tracking-tight text-white">
+                  <h3 className="relative mt-8 text-2xl font-bold tracking-tight text-white">
                     {p.title}
                   </h3>
                   <p className="relative mt-3 text-sm leading-relaxed text-neutral-400">
@@ -94,6 +102,24 @@ export function Projects() {
             </Reveal>
           ))}
         </div>
+
+        <Reveal delay={0.2}>
+          <div className="mt-12 flex flex-col items-center justify-center gap-4 text-center">
+            <p className="text-sm text-neutral-400">
+              Explore the full archive of experiments, prototypes and open-source work.
+            </p>
+            <a
+              href="https://github.com/billzcoding"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-2.5 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-black shadow-2xl shadow-orange-500/10 transition-all hover:bg-neutral-200 hover:shadow-orange-500/20"
+            >
+              <Github className="h-4 w-4" />
+              View more projects on GitHub
+              <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </a>
+          </div>
+        </Reveal>
       </div>
     </section>
   );
