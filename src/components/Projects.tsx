@@ -1,4 +1,4 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Github } from "lucide-react";
 import { TiltCard } from "./TiltCard";
 import { Reveal } from "./Reveal";
 
@@ -7,25 +7,33 @@ const projects = [
     n: "01",
     title: "Pocket Agent",
     tag: "Local AI Engine",
-    body: "Local AI agent engine engineered by fine-tuning a 0.5B LLM utilizing Unsloth and LoRA frameworks. Achieved 100% tool-calling precision and sub-200ms CPU execution limits via GGUF 4-bit quantization.",
-    stack: ["Python", "Unsloth", "GGUF"],
+    body: "High-performance offline AI agent — fine-tuned a 0.5B LLM with Unsloth + LoRA. 100% tool-calling accuracy and sub-200ms CPU latency via 4-bit GGUF quantization.",
+    stack: ["Python", "Unsloth", "GGUF", "llama.cpp"],
     accent: "from-orange-500/30 via-orange-500/5 to-transparent",
   },
   {
     n: "02",
     title: "EatGuru",
     tag: "Predictive Allocation",
-    body: "A predictive allocation and budget algorithm built to safely handle real-time macro-nutrient and expense surpluses. Scaled execution to onboard 24 active paying tiers within 3 days (Fixed Survivor tier at 200 PKR).",
+    body: "Automated budget & nutrition engine with predictive calorie + expense re-calibration. Onboarded 24 paying users within 3 days of launch.",
     stack: ["TypeScript", "FastAPI", "Algorithms"],
     accent: "from-blue-500/25 via-blue-500/5 to-transparent",
   },
   {
     n: "03",
-    title: "BlinkTalk Suite",
+    title: "Blink-Talk",
     tag: "Assistive CV",
-    body: "An offline-ready computer vision assistive infrastructure driven by MediaPipe gesture frameworks. Bridges eye-blink sequencing with localized pipeline transformations under a 300ms delay envelope.",
-    stack: ["OpenCV", "MediaPipe", "Python"],
+    body: "Offline-ready computer vision suite using MediaPipe + an integrated LLM, enabling communication for paralyzed individuals at <300ms end-to-end latency.",
+    stack: ["OpenCV", "MediaPipe", "Python", "LLM"],
     accent: "from-emerald-500/20 via-emerald-500/5 to-transparent",
+  },
+  {
+    n: "04",
+    title: "Khata",
+    tag: "Restaurant Mgmt",
+    body: "ACID-compliant restaurant management system with a 12-table relational schema and RBAC dashboards. Automated inventory tracking for 50+ items.",
+    stack: ["Python", "SQLite", "RBAC"],
+    accent: "from-purple-500/25 via-purple-500/5 to-transparent",
   },
 ];
 
