@@ -52,13 +52,13 @@ export function Projects() {
               </h2>
             </div>
             <p className="max-w-sm text-sm text-neutral-400">
-              Three systems. Each one solves a real bottleneck — latency, allocation,
-              or accessibility — at the edge.
+              Four systems. Each solving a real bottleneck — latency, allocation,
+              accessibility, or data integrity — at the edge.
             </p>
           </div>
         </Reveal>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {projects.map((p, i) => (
             <Reveal key={p.title} delay={i * 0.08}>
               <TiltCard className="h-full">
@@ -73,7 +73,7 @@ export function Projects() {
                     </span>
                   </div>
 
-                  <h3 className="relative mt-8 text-3xl font-bold tracking-tight text-white">
+                  <h3 className="relative mt-8 text-2xl font-bold tracking-tight text-white">
                     {p.title}
                   </h3>
                   <p className="relative mt-3 text-sm leading-relaxed text-neutral-400">
@@ -102,6 +102,28 @@ export function Projects() {
             </Reveal>
           ))}
         </div>
+
+        <Reveal delay={0.2}>
+          <div className="mt-12 flex flex-col items-center justify-center gap-4 text-center">
+            <p className="text-sm text-neutral-400">
+              Explore the full archive of experiments, prototypes and open-source work.
+            </p>
+            <a
+              href="https://github.com/billzcoding"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-2.5 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-black shadow-2xl shadow-orange-500/10 transition-all hover:bg-neutral-200 hover:shadow-orange-500/20"
+            >
+              <Github className="h-4 w-4" />
+              View more projects on GitHub
+              <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </a>
+          </div>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
       </div>
     </section>
   );
