@@ -52,10 +52,7 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.25 }}
             className="mt-6 max-w-xl text-base text-neutral-400 sm:text-lg"
           >
-            Computer Science undergrad at GIKI, building localized, low-latency
-            agentic systems and high-concurrency backends. From fine-tuning a 0.5B
-            LLM that runs on CPU in under 200ms, to shipping enterprise Blazor
-            applications for 500+ users.
+            I build AI systems and backends — clean, fast, and shipped.
           </motion.p>
 
           <motion.div
@@ -146,15 +143,15 @@ export function Hero() {
               <motion.div
                 animate={{ y: [0, -14, 0], rotate: [-2, 1, -2] }}
                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                className="glass-strong flex items-center gap-2.5 rounded-2xl px-3.5 py-2.5 shadow-2xl shadow-black/50"
+                className="glass-strong flex items-center rounded-2xl py-2.5 shadow-2xl shadow-black/50 px-0 gap-0"
                 style={{ transform: "perspective(800px) rotateY(8deg)" }}
               >
                 <div className="grid h-8 w-8 place-items-center rounded-lg bg-orange-500/20 text-orange-400">
                   <Cpu className="h-4 w-4" />
                 </div>
                 <div className="text-[11px] leading-tight">
-                  <div className="font-semibold text-white">0.5B LLM</div>
-                  <div className="text-neutral-400">sub-200ms · CPU</div>
+                  <div className="font-semibold text-white">​</div>
+                  <div className="text-neutral-400">​</div>
                 </div>
               </motion.div>
             </motion.div>
