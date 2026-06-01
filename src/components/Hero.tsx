@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, FileText, Cpu, Layers, Sparkles, Github, Linkedin, MapPin } from "lucide-react";
+import { ArrowUpRight, FileText, Github, Linkedin, MapPin } from "lucide-react";
 import bilal from "@/assets/bilal-original.png";
 
 export function Hero() {
