@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, FileText, Github, Linkedin, MapPin } from "lucide-react";
+import { ArrowUpRight, FileText, Cpu, Layers, Sparkles, Github, Linkedin, MapPin } from "lucide-react";
 import bilal from "@/assets/bilal-original.png";
 
 export function Hero() {
@@ -133,6 +133,72 @@ export function Hero() {
               }}
             />
 
+            {/* Floating 3D cards */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.6, duration: 0.8 }}
+              className="absolute left-0 top-12"
+            >
+              <motion.div
+                animate={{ y: [0, -14, 0], rotate: [-2, 1, -2] }}
+                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                className="glass-strong flex items-center rounded-2xl py-2.5 shadow-2xl shadow-black/50 px-0 gap-0"
+                style={{ transform: "perspective(800px) rotateY(8deg)" }}
+              >
+                <div className="grid h-8 w-8 place-items-center rounded-lg bg-orange-500/20 text-orange-400">
+                  <Cpu className="h-4 w-4" />
+                </div>
+                <div className="text-[11px] leading-tight">
+                  <div className="font-semibold text-white">​</div>
+                  <div className="text-neutral-400">​</div>
+                </div>
+              </motion.div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.75, duration: 0.8 }}
+              className="absolute right-0 top-1/3"
+            >
+              <motion.div
+                animate={{ y: [0, 16, 0], rotate: [2, -1, 2] }}
+                transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+                className="glass-strong flex items-center gap-2.5 rounded-2xl px-3.5 py-2.5 shadow-2xl shadow-black/50"
+                style={{ transform: "perspective(800px) rotateY(-8deg)" }}
+              >
+                <div className="grid h-8 w-8 place-items-center rounded-lg bg-blue-500/20 text-blue-300">
+                  <Layers className="h-4 w-4" />
+                </div>
+                <div className="text-[11px] leading-tight">
+                  <div className="font-semibold text-white">.NET / Blazor</div>
+                  <div className="text-neutral-400">500+ users · 97% acc</div>
+                </div>
+              </motion.div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.9, duration: 0.8 }}
+              className="absolute -bottom-2 left-6"
+            >
+              <motion.div
+                animate={{ y: [0, -8, 0] }}
+                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                className="glass-strong flex items-center gap-2.5 rounded-2xl px-3.5 py-2.5 shadow-2xl shadow-black/50"
+                style={{ transform: "perspective(800px) rotateX(-6deg)" }}
+              >
+                <div className="grid h-8 w-8 place-items-center rounded-lg bg-emerald-500/20 text-emerald-300">
+                  <Sparkles className="h-4 w-4" />
+                </div>
+                <div className="text-[11px] leading-tight">
+                  <div className="font-semibold text-white">Agentic RAG</div>
+                  <div className="text-neutral-400">LoRA · Unsloth</div>
+                </div>
+              </motion.div>
+            </motion.div>
           </div>
         </motion.div>
       </div>
