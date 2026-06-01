@@ -133,19 +133,7 @@ export function Hero() {
               }}
             />
 
-            {/* portrait — blends into bg via mask */}
-            <img
-              src={bilal}
-              alt="Raja Bilal Khurram, AI Engineer"
-              className="absolute inset-0 h-full w-full object-cover object-top"
-              style={{
-                WebkitMaskImage:
-                  "radial-gradient(ellipse 75% 85% at 60% 45%, #000 55%, transparent 95%)",
-                maskImage:
-                  "radial-gradient(ellipse 75% 85% at 60% 45%, #000 55%, transparent 95%)",
-                filter: "contrast(1.05) saturate(0.95)",
-              }}
-            />
+          </div>
         </motion.div>
       </div>
     </section>
